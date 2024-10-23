@@ -29,7 +29,6 @@ firebaseFunction.get(
     getBlogPostValidation,
     async (req, res) => {
         try {
-            console.log('GET_BLOG_POST_FUNCTION');
 
             // Extract blog post ID from request params (already validated by the middleware)
             const { id } = req.params;

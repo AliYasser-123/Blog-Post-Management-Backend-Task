@@ -29,7 +29,6 @@ firebaseFunction.get(
     listBlogPostsValidation,
     async (req, res) => {
         try {
-            console.log('LIST_BLOG_POSTS_FUNCTION');
 
             // Get connection to the database
             const connection = await getPromiseConnection();

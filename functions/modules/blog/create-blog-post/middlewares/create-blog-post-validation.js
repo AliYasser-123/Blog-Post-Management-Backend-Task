@@ -10,7 +10,6 @@ const {
 module.exports = {
     addBlogPostValidation: async (req, res, next) => {
         try {
-            console.log('ADD_BLOG_POST_VALIDATION_MIDDLEWARE');
 
             const schema = Joi.object({
                 title: Joi.string().min(3).max(255).required().label('Title'),
@@ -34,7 +33,6 @@ module.exports = {
                     .status(400)
                     .send({ message: err.details[0].message, data: null });
             } else {
-                console.log(err);
                 await endPromiseConnection(getPromiseConnection());
                 return res
                     .status(500)

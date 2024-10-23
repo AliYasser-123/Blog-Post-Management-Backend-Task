@@ -29,7 +29,6 @@ firebaseFunction.put(
     updateBlogPostValidation,
     async (req, res) => {
         try {
-            console.log('UPDATE_BLOG_POST_FUNCTION');
 
             // Extract blog post ID from request params
             const { id } = req.params;

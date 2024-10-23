@@ -33,7 +33,6 @@ firebaseFunction.post(
     addBlogPostValidation,
     async (req, res) => {
         try {
-            console.log('ADD_BLOG_POST_FUNCTION');
 
             // Extract the blog post data from request body
             const { title, content, tags } = req.body;

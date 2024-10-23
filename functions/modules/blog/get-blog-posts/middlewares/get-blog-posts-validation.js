@@ -6,7 +6,6 @@ const {
 module.exports = {
     listBlogPostsValidation: async (req, res, next) => {
         try {
-            console.log('LIST_BLOG_POSTS_VALIDATION_MIDDLEWARE');
 
             // Here, you can add any query params or pagination validation later if needed.
             // Proceed to the next middleware or API logic

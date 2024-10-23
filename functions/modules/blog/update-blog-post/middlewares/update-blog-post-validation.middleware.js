@@ -16,7 +16,6 @@ attachGlobalMiddlewares(firebaseFunction);
 // Define PUT route for updating a blog post
 firebaseFunction.put('/blog/:id', verifyToken, updateBlogPostValidation, async (req, res) => {
     try {
-        console.log('UPDATE_BLOG_POST_FUNCTION');
 
         // Extract blog post ID from request params
         const { id } = req.params;

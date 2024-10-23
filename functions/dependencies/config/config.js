@@ -1,8 +1,6 @@
 const mysql = require("mysql2");
 
 const startConnection = () => {
-    console.log('START_DB_CONNECTION')
-
     _promiseConnection = mysql.createConnection({
         host: process.env.DB_HOST,
         port: process.env.DB_PORT,
@@ -31,7 +29,6 @@ const getPromiseConnection = () => {
  * @param {Connection} promiseConnection 
 */
 const endPromiseConnection = async (promiseConnection) => {
-    console.log('END_DB_CONNECTION')
     await promiseConnection.end()
 }
 

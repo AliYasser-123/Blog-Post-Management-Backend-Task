@@ -10,7 +10,6 @@ const {
 module.exports = {
     deleteBlogPostValidation: async (req, res, next) => {
         try {
-            console.log('DELETE_BLOG_POST_VALIDATION_MIDDLEWARE');
 
             const schema = Joi.object({
                 id: Joi.number().integer().min(1).required().label('Post ID'),
@@ -29,7 +28,6 @@ module.exports = {
                     .status(400)
                     .send({ message: err.details[0].message, data: null });
             } else {
-                console.log(err);
                 await endPromiseConnection(getPromiseConnection());
                 return res
                     .status(500)

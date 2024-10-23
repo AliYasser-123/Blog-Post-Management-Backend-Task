@@ -33,7 +33,6 @@ firebaseFunction.delete(
     deleteBlogPostValidation,
     async (req, res) => {
         try {
-            console.log('DELETE_BLOG_POST_FUNCTION');
 
             // Extract the blog post ID from request params
             const { id } = req.params;
